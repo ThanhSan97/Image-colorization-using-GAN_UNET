@@ -44,9 +44,8 @@ def make_color(path_input):
     input_img = convert_image_inputs(image)
     input_img = np.array(input_img)
     input_img = input_img/255.0
-    # generated_image = model_keras.predict(input_img)
-    return 0
-    # return generated_image
+    generated_image = model_keras.predict(input_img)
+    return generated_image
 
 def result(output):
     num_samples = len(output)
@@ -72,32 +71,38 @@ import PIL.Image
 def index():
     return render_template('homepage.html')
 
-@app.route('/upload', methods=['GET','POST'])
-def upload_image():
-    if request.method == 'POST':
-        if 'image' in request.files:
-            image = request.files['image']
-            if image.filename != '':
-                image_path = os.path.join('static', 'uploads', image.filename)
-                image.save(image_path)
+# @app.route('/upload', methods=['GET','POST'])
+# def upload_image():
+#     if request.method == 'POST':
+#         if 'image' in request.files:
+#             image = request.files['image']
+#             if image.filename != '':
+#                 image_path = os.path.join('static', 'uploads', image.filename)
+#                 image.save(image_path)
 
-                generated_image = make_color(image_path)
-                print(generated_image[0])
-                generated_image = generated_image[0]
-                generated_image = generated_image*255.0
+#                 generated_image = make_color(image_path)
+#                 print(generated_image[0])
+#                 generated_image = generated_image[0]
+#                 generated_image = generated_image*255.0
                 
-                # Lưu ảnh đã tô màu xuống máy chủ
-                generated_image_filename = 'generated_' + image.filename
-                generated_image_path = os.path.join('static', 'generated', generated_image_filename)
-                generated_image_rgb = cv2.cvtColor(generated_image, cv2.COLOR_BGR2RGB)
-                SIZE = 512
-                res_img1 = cv2.resize(generated_image_rgb, (SIZE, SIZE))
-                cv2.imwrite(generated_image_path, res_img1)
+#                 # Lưu ảnh đã tô màu xuống máy chủ
+#                 generated_image_filename = 'generated_' + image.filename
+#                 generated_image_path = os.path.join('static', 'generated', generated_image_filename)
+#                 generated_image_rgb = cv2.cvtColor(generated_image, cv2.COLOR_BGR2RGB)
+#                 SIZE = 512
+#                 res_img1 = cv2.resize(generated_image_rgb, (SIZE, SIZE))
+#                 cv2.imwrite(generated_image_path, image)
 
-                return redirect(url_for('show_image', filename=generated_image_filename))
+#                 return redirect(url_for('show_image', filename=generated_image_filename))
 
-    # Nếu không phải POST hoặc không có ảnh, hiển thị trang upload
-    return render_template('homepage.html')
+#     # Nếu không phải POST hoặc không có ảnh, hiển thị trang upload
+#     return render_template('homepage.html')
+@app.route('/upload', methods=['POST'])
+def upload_image():
+    if 'image' in request.files:
+        image = request.files['image']
+        image.save(os.path.join('static', 'uploads', image.filename))
+        return redirect(url_for('show_image', filename=image.filename))
 
 
 @app.route('/show/<filename>')
