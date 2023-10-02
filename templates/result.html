@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .container {
+            text-align:center;
+        }
+        img {
+            max-width: 100%;
+            max-width: 350px;
+
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .download-link {
+            display: block;
+            margin-top: 10px;
+            text-decoration:none;
+            padding:5px;
+            background-color:yellow;
+            margin-left:650px;
+            margin-right:650px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Image Processing Result</h1>
+</div>
+<div class="container">
+    <img id="img-preview" src="{{ uploaded_image_url }}" alt="Uploaded Image">
+    <a class="download-link" href="{{ uploaded_image_url }}" download>Download Image</a>
+
+</div>
+</body>
+</html>
