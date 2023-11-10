@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.image-comparison {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.image-wrapper {
+  flex-basis: 48%; /* Điều chỉnh kích thước của ảnh trước và sau tùy ý */
+  text-align: center;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  padding: 5px;
+  background-color: #f9f9f9;
+}
+
+.download-link {
+  display: block;
+  margin-top: 20px;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.download-link:hover {
+  background-color: #0056b3;
+}
