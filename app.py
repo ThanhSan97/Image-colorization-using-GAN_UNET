@@ -45,7 +45,7 @@ def result(output):
     fig = plt.figure()
     ax = fig.add_subplot(1, 1, 1)
     ax.imshow(output)
-    ax.set_title('Đầu ra')
+    ax.set_title('Output')
     plt.show()
 
 
