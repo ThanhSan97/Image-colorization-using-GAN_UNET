@@ -20,9 +20,9 @@ app.py: Uses the Flask library to embed the model into the web
 
 II. Step to Clone the GitHub repository and run the project
   1. Clone the repository
-  git clone https://github.com/ThanhSan97/Image-colorization-using-GAN_UNET.git
+  - git clone https://github.com/ThanhSan97/Image-colorization-using-GAN_UNET.git
   2. Go to folder and Install the necessary libraries with pip
-    pip install -r requirements.txt
+  - pip install -r requirements.txt
   4. Download the 'model.h5' file and save it to the project directory.
   5. Run app.py
   6. Enjoy the game 
