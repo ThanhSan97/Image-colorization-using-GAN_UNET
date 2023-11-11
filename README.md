@@ -26,3 +26,17 @@ II. Step to Clone the GitHub repository and run the project
   4. Download the 'model.h5' file and save it to the project directory.
   5. Run app.py
   6. Enjoy the game 
+
+III. Project members
+1. NGUYEN DINH THANH SAN
+- Major: Artificial Intelligence
+Contact:
+ + Linkedin: https://www.linkedin.com/in/thanh-san-a3b45b275
+ + Github: ThanhSan97
+ + Gmail: sannguyen0907@gmail.com - nguyendthanhsan@gmail.com
+2. NGUYEN HUYNH CHI KHANG
+- Major: Artificial Intelligence
+Contact:
+ + Linkedin: linkedin.com/in/nguyen-huynh-chi-khang-607a3926a
+ + Github: Khang1405
+ + Gmail: chikhang1235202@gmail.com
