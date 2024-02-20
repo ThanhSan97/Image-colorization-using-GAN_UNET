@@ -40,3 +40,8 @@ III. Project members
  + Linkedin: linkedin.com/in/nguyen-huynh-chi-khang-607a3926a
  + Github: Khang1405
  + Gmail: chikhang1235202@gmail.com
+3. NGUYEN PHAN DUC THANH
+- Major: Artificial Intelligence
+- Contact:
+ + Github: NguyenPhanDucThanh
+ + Gmail: thanhnguyen1802dn@gmail.com
