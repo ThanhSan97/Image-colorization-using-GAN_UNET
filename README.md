@@ -13,9 +13,9 @@ Fundamentally, the training process for the two models and the image colorizatio
 - Dataset: https://drive.google.com/drive/folders/1R1cceF-7gmaeG20WTvy2ima-oCptnNbD?usp=drive_link
 
 *Regarding the important files in the project:
-static: Location for storing input and output images on the website.
-template: Builds the basic interface.
-app.py: Uses the Flask library to embed the model into the web
++ static: Location for storing input and output images on the website. Images result are stored in static/generated folder
++ template: Builds the basic interface.
++ app.py: Uses the Flask library to embed the model into the web
 
 
 II. Step to Clone the GitHub repository and run the project
